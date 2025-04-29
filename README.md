@@ -1,0 +1,1 @@
+um projeto simples o qual irei usar oq aprendi de nodejs, express, mongoose, ejs e typescript. 
