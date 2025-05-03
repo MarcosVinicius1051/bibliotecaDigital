@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/bancoLivros").then(()=>{
@@ -6,3 +6,5 @@ mongoose.connect("mongodb://localhost/bancoLivros").then(()=>{
 }).catch((err)=>{
     console.log("db mongodb error: "+err)
 })
+
+export default mongoose; 
