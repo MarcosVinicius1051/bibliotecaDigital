@@ -10,7 +10,7 @@ router.get("/",(req,res)=>{
 //     res.render("books")
 // });
 router.get("/addNewBook",(req,res)=>{
-    res.render("books")
+    res.render("newBook")
 });
 router.post("/newBookData", (req,res)=>{
 

@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/pages/newBook.css">
+    <title>new Book</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Biblioteca digital</h1>
+    </header>
+    <section class="centralSection">
+        <form action="" class="newBook">
+
+                <div class="TextDetails">
+                    <input type="text" placeholder="titulo">
+                    <textarea name="preface" id="preface" placeholder="Digite o préfacio da obra aqui" cols="65" rows="25"></textarea>
+                </div>
+                <div class="imageDetails">
+                    <h1>Adicione a capa do livro </h1>
+                    <label for="upadteImage" class="fileUpdate">adicionar imagem:</label>
+                    <input type="file" id="upadteImage" required >
+                </div>
+                <div class="opinioInText"> 
+                    <h1>Escreva sua opnião do livro</h1>
+                    <textarea name="" id="" placeholder="análise do livro" cols="65" rows="25"></textarea>
+                </div>
+                <div class="opinionInGrade">
+                    <h2>nota</h2>
+                    <img src="/assets/images/stars/starGrade0.png" alt="">
+                    <select name="" id="">
+                        <option id="escolherNota" value="" selected disabled>escolha uma nota</option>
+                        <option value="">muito ruim</option>
+                        <option value="">ruim</option>
+                        <option value="">médio</option>
+                        <option value="">bom</option>
+                        <option value="">muito bom </option>
+                    </select>
+
+                </div>
+            <div class="buttonSubmit">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        qualquer coisa
+    </footer>
 </body>
 </html>
