@@ -12,25 +12,25 @@
         <h1>Biblioteca digital</h1>
     </header>
     <section class="centralSection">
-        <form action="" class="newBook">
+        <form action="/library/newBookData" class="newBook" enctype="multipart/form-data">
 
                 <div class="TextDetails">
-                    <input type="text" placeholder="titulo">
+                    <input type="text" name="title" placeholder="titulo">
                     <textarea name="preface" id="preface" placeholder="Digite o préfacio da obra aqui" cols="65" rows="25"></textarea>
                 </div>
                 <div class="imageDetails">
                     <h1>Adicione a capa do livro </h1>
                     <label for="upadteImage" class="fileUpdate">adicionar imagem:</label>
-                    <input type="file" id="upadteImage" required >
+                    <input type="file" name="imageFile" id="upadteImage" required >
                 </div>
                 <div class="opinioInText"> 
                     <h1>Escreva sua opnião do livro</h1>
-                    <textarea name="" id="" placeholder="análise do livro" cols="65" rows="25"></textarea>
+                    <textarea name="opinion" id="" placeholder="análise do livro" cols="65" rows="25"></textarea>
                 </div>
                 <div class="opinionInGrade">
                     <h2>nota</h2>
                     <img src="/assets/images/stars/starGrade0.png" alt="">
-                    <select name="" id="">
+                    <select name="grade" id="grade">
                         <option id="escolherNota" value="" selected disabled>escolha uma nota</option>
                         <option value="">muito ruim</option>
                         <option value="">ruim</option>

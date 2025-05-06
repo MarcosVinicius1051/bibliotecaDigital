@@ -1,7 +1,5 @@
-import { stringify } from "querystring";
+
 import mongoose from "./db.js";
-import { type } from "os";
-import { deflate } from "zlib";
 
 const Schema = mongoose.Schema; 
 
@@ -15,7 +13,7 @@ const livroModel = Schema({
         type: String, 
         required: true
     },
-    opnion:{
+    opinion:{
         type:String,
         required:true
     },
@@ -25,6 +23,14 @@ const livroModel = Schema({
     },
     favorite: {
         type:Boolean,
+    },
+    bookImageLink:{
+        type:String,
+        required:true
+    },
+    bookId:{
+        type:Number,
+        required: true
     }
 })
 
