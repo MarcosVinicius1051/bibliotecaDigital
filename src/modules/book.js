@@ -17,7 +17,7 @@ const livroModel = Schema({
         type:String,
         required:true
     },
-    gradde: {
+    grade: {
         type: Number, 
         required:true
     },

@@ -1,4 +1,5 @@
 import express from "express"
+
 import router from "./src/routes/booksRoute.js";
 const app = express(); 
 const PORT= 3031;
@@ -13,7 +14,8 @@ const PORT= 3031;
     //Public
         app.use(express.static("./src/public"));
     //Rotas
-        app.use("/library",router)
+        app.use("/library",router);
+
 
 
 

@@ -1,21 +1,31 @@
 import cloudinary from "../config/cloudinary.js";
 
+
 export default async function cloudinaryFun(input) {
-  const results = await cloudinary.uploader.upload("./image/chamado de chutulu.png"); //aqui vai estar o sistema o qual ira enviar a imagem para o banco de dados 
-  console.log(results);
-  const url = cloudinary.url(results.public_id, {
-    transformation: [
-      {
-        quality: "auto",
-        fetch_format: "auto",
-      },
-    ],
-  });
-console.log("funciona")
+  console.log("Arquivo recebido:", input);
+  
+  try {
 
+    // Usar a opção 'filename' para arquivos no sistema de arquivos
+    const results = await cloudinary.uploader.upload(input, {
+      folder: "biblioteca-virtual",
+      resource_type: "auto" // Detecta automaticamente o tipo de arquivo
+    });
+    
+    // console.log("Upload bem-sucedido:", results);
+    
+    const url = cloudinary.url(results, {
+      transformation: [
+        {
+          quality: "auto",
+          fetch_format: "auto",
+        },
+      ],
+    });
+    
+    return results.url;
+  } catch (error) {
+    console.error("Erro no upload para Cloudinary:", error);
+    throw error;
+  }
 };
-
-/* ATENÇÃO */
-
-/* Vai ser necessario puxar do json criado no console.log(results) o link da imagem,
- e colocar ela no mongodb */
