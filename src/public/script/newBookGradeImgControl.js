@@ -10,7 +10,6 @@ let gradeImageObject = {
     5: "/assets/images/stars/starGrade5.png"
 }
 
-
 gradeNote.addEventListener("click", ()=>{
     let gradeValue = parseInt(gradeNote.value);
     gradeStarsImage.src = gradeImageObject[gradeValue]
