@@ -1,7 +1,9 @@
 <% for(let i=0;i<booksRender.length;i++){%>
-    <div class="book">
-        <img class="imageBookHome" src= " <%= booksRender[i].bookImageLink %> " alt="<%= booksRender[i].titulo %>">
-        <h3 ><%= booksRender[i].titulo %></h3>
-        <img class="gradeBookHome " id = "<%= booksRender[i].grade%>"  src="/assets/images/stars/starGrade0.png" alt="nota">
-    </div>
+    <form action="/library/book/<%= booksRender[i].titulo %>/<%= booksRender[i].bookId %>" method="get" class="formBookData">
+            <div class="book">
+                <img class="imageBookHome" src= " <%= booksRender[i].bookImageLink %> " alt="<%= booksRender[i].titulo %>">
+                <h3 ><%= booksRender[i].titulo %></h3>
+                <img class="gradeBookHome " id = "<%= booksRender[i].grade%>"  src="/assets/images/stars/starGrade0.png" alt="nota">
+            </div>
+    </form>
 <% } %>

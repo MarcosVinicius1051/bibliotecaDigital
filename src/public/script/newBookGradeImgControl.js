@@ -1,5 +1,7 @@
 const gradeStarsImage = document.querySelector(".gradeStarsImage");
-const gradeNote = document.querySelector("#grade");
+let gradeNote = document.querySelector("#grade");
+
+
 
 let gradeImageObject = {
     0: "/assets/images/stars/starGrade0.png",
@@ -14,3 +16,4 @@ gradeNote.addEventListener("click", ()=>{
     let gradeValue = parseInt(gradeNote.value);
     gradeStarsImage.src = gradeImageObject[gradeValue]
 })
+

@@ -2,7 +2,7 @@ import cloudinary from "../config/cloudinary.js";
 
 
 export default async function cloudinaryFun(input) {
-  console.log("Arquivo recebido:", input);
+  // console.log("Arquivo recebido:", input);
   
   try {
 

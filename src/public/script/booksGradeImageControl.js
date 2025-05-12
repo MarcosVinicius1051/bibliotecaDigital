@@ -1,6 +1,3 @@
-const allBooks = document.querySelectorAll(".book")
-const allGradesBooks = [...document.querySelectorAll(".gradeBookHome")];
-
 let gradeImageObject = {
     0: "/assets/images/stars/starGrade0.png",
     1: "/assets/images/stars/starGrade1.png",
@@ -10,7 +7,25 @@ let gradeImageObject = {
     5: "/assets/images/stars/starGrade5.png"
 }
 
+if(document.querySelectorAll(".book")){
+    gradeBooksHome()
+}
 
-allGradesBooks.map(grade =>{
-grade.src = gradeImageObject[grade.id]
+if(document.querySelector(".bookCover")){
+    console.log("ola mundo")
+    gradeBookSelected()
+}
+
+function gradeBooksHome(){
+    const allGradesBooks = [...document.querySelectorAll(".gradeBookHome")];
+
+    allGradesBooks.map(grade =>{
+    grade.src = gradeImageObject[grade.id]
 })
+}
+
+
+function gradeBookSelected(){
+    const gradeBook = document.querySelector(".bookGradeImage")
+    gradeBook.src = gradeImageObject[gradeBook.id]
+}

@@ -1,0 +1,103 @@
+header {
+  background-color: #7ef5f4;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.centralSection {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainInformationBook{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+.mainInformationBook h1{
+    margin: 0px;
+    font-size: 60px;
+}
+
+.mainInformationBook p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+.imagesBook{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.bookCover{
+    width: 400px;
+}
+.bookGradeImage{
+    width: 300px;
+}
+
+.optionBook{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+}
+.optionBook h1{
+    margin: 0px;
+    font-size: 60px;
+}
+.optionBook p{
+    font-size: 25px;
+    text-align: justify;
+}
+.deleteBook{
+    width: 100%;
+    margin-right: 60px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+}
+
+.deleteBook button{
+    font-size: 25px;
+    height: 60px;
+    width: 200px;
+    background-color: rgb(252, 113, 100);
+    border: 0px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.deleteBook button:hover{
+    border: 2px solid rgb(252, 113, 100);
+    background-color: hsl(5, 96%, 98%);
+}

@@ -9,7 +9,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
 
   BookModel.find().lean().then((booksData)=>{
-    console.log(booksData)
+
     res.render("books", {booksRender: booksData})
   }).catch((err)=>{
     console.log("algo deu errado ao tentar renderizar os livros: "+err)
@@ -57,7 +57,7 @@ router.post("/upload", (req, res) => {
           bookId:livros.length
         }
         new BookModel(novoLivro).save().then(()=>{
-          console.log("novo livro cadastrado");
+          // console.log("novo livro cadastrado");
           res.redirect("/library")
         }).catch((err)=>{
           console.log("erro cadastro livro: "+err);
@@ -72,5 +72,18 @@ router.post("/upload", (req, res) => {
   });
 });
 
+
+router.get('/book/:titulo/:bookId', (req,res)=>{
+  const titleBook = req.params.titulo
+  const idBook = parseInt(req.params.bookId)
+
+
+  BookModel.findOne({"bookId":idBook }).lean().then(livro=>{
+    console.log("funciona")
+    res.render("chosenBook", {livroInfo :livro})
+  }).catch((err)=>{
+    console.log("algo deu errado ao carregar o livro "+titleBook + ": "+ err);
+  })
+})
 
 export default router;

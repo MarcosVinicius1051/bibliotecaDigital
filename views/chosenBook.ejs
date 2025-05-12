@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/pages/bookSelected.css">
+    <link rel="stylesheet" href="/style/global.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+       <a href="/library"><h1>Biblioteca digital</h1></a> 
+    </header>
+    <section class="centralSection">
+        <div class="mainInformationBook">
+            <h1><%= livroInfo.titulo %></h1>
+            <p><%= livroInfo.description %></p>
+        </div>
+        <div class="imagesBook">
+            <img class="bookCover" src="<%= livroInfo.bookImageLink %>" alt="">
+            <img class="bookGradeImage" id="<%= livroInfo.grade%>" src="/assets/images/stars/starGrade0.png" alt="nota">
+        </div>
+        <div class="optionBook">
+            <h1>Opinião sobre o livro</h1>
+           <p><%= livroInfo.opinion %></p> 
+        </div>
+        <div class="deleteBook">
+            <button>Excluir Livro</button>
+        </div>
+        
+    </section>
+    <footer>
+        porra nenhuma... Por agora
+    </footer>
+    <script src="/script/booksGradeImageControl.js"></script>
+</body>
+</html>
