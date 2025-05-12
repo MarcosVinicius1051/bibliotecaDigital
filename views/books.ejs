@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="head">
-            <img src="/assets/images/add.png" alt="adicionar">
+            <a href="/library/addNewBook"><img src="/assets/images/add.png" alt="adicionar"></a>
             <h1>Biblioteca digital</h1>
         </div>
     </header>
@@ -21,39 +21,13 @@
     </section>
     <section class="centralSection">
         <div class="booksSection">
-            <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div>
-            <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div> <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div> <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div> <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div> <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div> <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div>
-            <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div>
-            <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div>
-            <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div>
-            <div class="book">
-                <img src="/assets/images/test/chut.png" alt="">
-            </div>
+           <%- include("../views/booksData.ejs")-%>
         </div>
         
     </section>
     <footer>
         ola mundo
     </footer>
+    <script src="/script/addButton.js"></script>
 </body>
 </html>

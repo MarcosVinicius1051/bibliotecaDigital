@@ -7,7 +7,14 @@ const router = express.Router();
 
 //Rotas
 router.get("/", (req, res) => {
-  res.render("books");
+
+  BookModel.find().lean().then((booksData)=>{
+    console.log(booksData)
+    res.render("books", {booksRender: booksData})
+  }).catch((err)=>{
+    console.log("algo deu errado ao tentar renderizar os livros: "+err)
+  })
+
 });
 
 router.get("/addNewBook", (req, res) => {

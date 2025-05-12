@@ -1,0 +1,7 @@
+<% for(let i=0;i<booksRender.length;i++){%>
+    <div class="book">
+        <img class="imageBookHome" src= " <%= booksRender[i].bookImageLink %> " alt="<%= booksRender[i].titulo %>">
+        <h3><%= booksRender[i].titulo %></h3>
+        <img class="gradeBookHome" src="/assets/images/stars/starGrade0.png" alt="nota">
+    </div>
+<% } %>
