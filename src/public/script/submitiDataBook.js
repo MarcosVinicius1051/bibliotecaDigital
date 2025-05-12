@@ -1,4 +1,8 @@
-const form = document.querySelector(".formBookData")
-form.addEventListener("click", ()=>{
-    form.submit()
-})
+const form = [...document.querySelectorAll(".formBookData")];
+
+form.map((bookForm) => {
+  bookForm.addEventListener("click", () => {
+    console.log(bookForm)
+    bookForm.submit();
+  });
+});

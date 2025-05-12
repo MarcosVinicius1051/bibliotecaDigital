@@ -1,8 +1,6 @@
 const gradeStarsImage = document.querySelector(".gradeStarsImage");
 let gradeNote = document.querySelector("#grade");
 
-
-
 let gradeImageObject = {
     0: "/assets/images/stars/starGrade0.png",
     1: "/assets/images/stars/starGrade1.png",
