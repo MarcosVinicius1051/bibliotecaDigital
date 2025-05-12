@@ -23,6 +23,10 @@ header {
 .head h1 {
   margin: 0px;
   padding: 0px;
+
+}
+.head h1:hover{
+    cursor: default;
 }
 .descriptionSection {
   background-color: #7ef5f4;
@@ -76,6 +80,7 @@ header {
   box-shadow: 1px 1px 20px rgb(171, 212, 249);
   width: 210px;
   height: 410px;
+  cursor: pointer;
 }
 
 .book h3{

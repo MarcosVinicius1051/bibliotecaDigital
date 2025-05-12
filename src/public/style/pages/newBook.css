@@ -6,6 +6,10 @@ header {
   justify-content: center;
   align-items: center;
 }
+header a {
+  text-decoration: none;
+  color: black;
+}
 
 .centralSection {
   margin-top: 40px;
