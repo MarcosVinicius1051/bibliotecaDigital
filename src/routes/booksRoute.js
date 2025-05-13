@@ -2,6 +2,7 @@
 import express from "express";
 import BookModel from "../modules/book.js";
 import cloudinaryFun from "../controllers/upload.js";
+import deleteCloudinaryImage from "../controllers/delet.js"
 import formidable from "formidable";
 const router = express.Router();
 
@@ -76,8 +77,6 @@ router.post("/upload", (req, res) => {
 router.get('/book/:titulo/:bookId', (req,res)=>{
   const titleBook = req.params.titulo
   const idBook = parseInt(req.params.bookId)
-
-
   BookModel.findOne({"bookId":idBook }).lean().then(livro=>{
     console.log("funciona")
     res.render("chosenBook", {livroInfo :livro})
@@ -86,4 +85,16 @@ router.get('/book/:titulo/:bookId', (req,res)=>{
   })
 })
 
+
+router.post("/deleteBook", (req,res)=>{
+  BookModel.findOne({bookId: req.body.deleteBook}).lean().then(livro=>{
+    deleteCloudinaryImage(livro.bookImageLink)
+  })
+  BookModel.deleteOne({bookId: req.body.deleteBook}).then(()=>{
+    console.log("livro deletado com sucesso");
+    res.redirect("/")
+  }).catch((err)=>{
+    console.log("erro ao tentar deletar o livro: "+ err)
+  })
+})
 export default router;

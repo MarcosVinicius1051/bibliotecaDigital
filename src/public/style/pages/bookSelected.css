@@ -101,3 +101,61 @@ header a {
     border: 2px solid rgb(252, 113, 100);
     background-color: hsl(5, 96%, 98%);
 }
+
+
+dialog::backdrop{
+    background-color: rgba(60, 57, 57, 0.7);
+}
+dialog{
+    width: 600px;
+    height: 150px;
+    border: 0px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 1px 25px rgb(69, 69, 69);
+    
+}
+dialog div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+dialog div p {
+    margin-top: 10px;
+    font-size: 20px;
+    margin: 0px;
+}
+dialog div div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.noDeleteBook{
+    width: 120px;
+    height: 45px;
+    background-color: rgb(98, 233, 98);
+    border: 0px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.noDeleteBook:hover{
+    background-color: hsl(120, 75%, 98%);
+    border: 2px solid rgb(98, 233, 98);
+}
+
+.confirmDeleteBook{
+    width: 120px;
+    height: 45px;
+    background-color: rgb(252, 113, 100);
+    border: 0px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.confirmDeleteBook:hover{
+    background-color: hsl(5, 96%, 98%);
+    border: 2px solid rgb(252, 113, 100);
+}

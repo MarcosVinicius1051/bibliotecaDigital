@@ -28,11 +28,16 @@
             <button>Excluir Livro</button>
         </div>
         <dialog>
-            <form action="">
-            <p>Realmente deseja excluir esse livro de sua biblioteca?</p>
-            <button class="noDeleteBook">não</button>
-            <button type="submit" class="DeleteBook">sim</button>
-            </form>
+            <div>
+                <p>Realmente deseja excluir esse livro de sua biblioteca?</p>
+                <div>
+                    <button class="noDeleteBook">não</button>
+                    <form action="/library/deleteBook" method="post">
+                        <input type="hidden" name="deleteBook" value="<%=livroInfo.bookId%>">
+                        <button type="submit" class="confirmDeleteBook">sim</button>
+                    </form>
+                </div>
+            </div>
         </dialog>
         
     </section>
