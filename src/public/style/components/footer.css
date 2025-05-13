@@ -1,0 +1,66 @@
+footer {
+  width: 100%;
+  background-color: #345362;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.pages h1{
+    font-size: 25px;
+}
+
+.pagesLink{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.pagesLink a{
+    text-decoration: none;
+    color: white;
+}
+
+.pagesLink a:hover{
+    color: rgb(51, 225, 248);
+}
+
+.contact{
+    width: 99%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 10px;
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.contact h1{
+    margin:5px;
+    margin-left: 50px;
+    font-size: 25px ;
+}
+.contactImage{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-right: 50px;
+}
+
+.contactImage img{
+    width: 40px;
+}
+.contactImage img:hover{
+    cursor: pointer;
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/pages/books.css">
+    <link rel="stylesheet" href="/style/components/footer.css">
     <title>Biblioteca digital</title>
 </head>
 <body>
@@ -26,8 +27,10 @@
         
     </section>
     <footer>
-        ola mundo
+        <%- include("../views/components/footer.ejs") -%>
     </footer>
+
+
     <script src="/script/addButton.js"></script>
     <script src="/script/booksGradeImageControl.js"></script>
     <script src="/script/submitiDataBook.js"></script>

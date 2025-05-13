@@ -87,12 +87,12 @@ router.get('/book/:titulo/:bookId', (req,res)=>{
 
 
 router.post("/deleteBook", (req,res)=>{
-  BookModel.findOne({bookId: req.body.deleteBook}).lean().then(livro=>{
+  BookModel.findOne({bookId: req.body.deleteBook}).lean().then((livro)=>{
     deleteCloudinaryImage(livro.bookImageLink)
   })
   BookModel.deleteOne({bookId: req.body.deleteBook}).then(()=>{
     console.log("livro deletado com sucesso");
-    res.redirect("/")
+    res.redirect("/library")
   }).catch((err)=>{
     console.log("erro ao tentar deletar o livro: "+ err)
   })
