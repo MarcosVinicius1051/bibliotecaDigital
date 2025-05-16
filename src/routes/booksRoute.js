@@ -4,13 +4,13 @@ import BookModel from "../modules/book.js";
 import cloudinaryFun from "../controllers/upload.js";
 import deleteCloudinaryImage from "../controllers/delet.js"
 import formidable from "formidable";
+
 const router = express.Router();
 
 //Rotas
 router.get("/", (req, res) => {
 
   BookModel.find().lean().then((booksData)=>{
-
     res.render("books", {booksRender: booksData})
   }).catch((err)=>{
     console.log("algo deu errado ao tentar renderizar os livros: "+err)
@@ -28,7 +28,9 @@ router.post("/upload", (req, res) => {
   const form = formidable({
     keepExtensions: true,
   });
+
   form.parse(req, async (err, fields, files) => {
+
     if (err) {
       console.error("Erro ao processar o formulário:", err);
       return res.status(500).send("Erro ao processar o formulário");
@@ -54,12 +56,16 @@ router.post("/upload", (req, res) => {
           opinion:fields.opinion[0],
           grade: gradeBook,
           favorite:false,
+
           bookImageLink:await cloudinaryFun(imagePath),
+
           bookId:livros.length
+
         }
         new BookModel(novoLivro).save().then(()=>{
-          // console.log("novo livro cadastrado");
           res.redirect("/library")
+
+
         }).catch((err)=>{
           console.log("erro cadastro livro: "+err);
         })
@@ -75,7 +81,10 @@ router.post("/upload", (req, res) => {
 
 
 router.get('/book/:titulo/:bookId', (req,res)=>{
+
   const titleBook = req.params.titulo
+
+
   const idBook = parseInt(req.params.bookId)
   BookModel.findOne({"bookId":idBook }).lean().then(livro=>{
     console.log("funciona")
@@ -90,6 +99,7 @@ router.post("/deleteBook", (req,res)=>{
   BookModel.findOne({bookId: req.body.deleteBook}).lean().then((livro)=>{
     deleteCloudinaryImage(livro.bookImageLink)
   })
+  
   BookModel.deleteOne({bookId: req.body.deleteBook}).then(()=>{
     console.log("livro deletado com sucesso");
     res.redirect("/library")
@@ -97,4 +107,6 @@ router.post("/deleteBook", (req,res)=>{
     console.log("erro ao tentar deletar o livro: "+ err)
   })
 })
+
+
 export default router;

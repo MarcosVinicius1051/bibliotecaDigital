@@ -1,9 +1,9 @@
 import express from "express"
-
 import router from "./src/routes/booksRoute.js";
+import "dotenv/config";
+
 const app = express(); 
 const PORT= 3031;
-
 
 //config
     //EJS 
@@ -18,8 +18,10 @@ const PORT= 3031;
 
 
 
-
 app.listen(PORT,()=>{
     console.log("servidor ligado")
 });
+
+import mongoose from "./src/modules/db.js";
+
 

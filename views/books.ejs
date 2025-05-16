@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="/style/global.css">
+    
     <link rel="stylesheet" href="/style/pages/books.css">
     <link rel="stylesheet" href="/style/components/footer.css">
     <title>Biblioteca digital</title>
@@ -20,12 +22,13 @@
             <p>Olá, bem-vindo à minha biblioteca digital! Este aqui é um pequeno projeto voltado ao estudo de algumas novas tecnologias que eu ainda não sabia nem por onde começar, como Node.js, EJS, MongoDB e a biblioteca de imagens Cloudinary... Mas, sendo bem sincero, acredito que ainda não seja capaz de explorar e extrair nem 10% de todas as funcionalidades dessas ferramentas. Contudo, esse pequeno projeto já foi o suficiente para me ajudar a compreender muitas coisas novas e, por isso, me sinto feliz de finalmente tê-lo terminado. No mais, é só isso. Espero que aproveite este mini site!</p>
         </div>
     </section>
+
     <section class="centralSection">
         <div class="booksSection">
            <%- include("../views/booksData.ejs")-%>
         </div>
-        
     </section>
+
     <footer>
         <%- include("../views/components/footer.ejs") -%>
     </footer>
